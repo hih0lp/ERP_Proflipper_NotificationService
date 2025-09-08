@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\erp_proflipper_notificationservice\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\erp_proflipper_notificationservice\\filters\\servicekeyauthattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:filters\\servicekeyauthattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\erp_proflipper_notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\erp_proflipper_notificationservice\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\erp_proflipper_notificationservice\\models\\userrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\erp_proflipper_notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\erp_proflipper_notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UserRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\Models\\UserRequest.cs",
               "RelativeDocumentMoniker": "Models\\UserRequest.cs",
@@ -62,25 +62,24 @@
               "RelativeToolTip": "Models\\UserRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T19:10:30.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T19:10:30.222Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ServiceKeyAuthAttribute.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\Filters\\ServiceKeyAuthAttribute.cs",
               "RelativeDocumentMoniker": "Filters\\ServiceKeyAuthAttribute.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\Filters\\ServiceKeyAuthAttribute.cs",
               "RelativeToolTip": "Filters\\ServiceKeyAuthAttribute.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-04T18:50:30.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "NotificationsHub.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\Hubs\\NotificationsHub.cs",
               "RelativeDocumentMoniker": "Hubs\\NotificationsHub.cs",
@@ -88,12 +87,11 @@
               "RelativeToolTip": "Hubs\\NotificationsHub.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T18:37:03.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T18:37:03.413Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Broadcast.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\Models\\Broadcast.cs",
               "RelativeDocumentMoniker": "Models\\Broadcast.cs",
@@ -101,12 +99,11 @@
               "RelativeToolTip": "Models\\Broadcast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T08:59:53.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T08:59:53.532Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\Models\\Notification.cs",
               "RelativeDocumentMoniker": "Models\\Notification.cs",
@@ -114,25 +111,24 @@
               "RelativeToolTip": "Models\\Notification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T08:43:04.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T08:43:04.957Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "Controllers\\NotificationController.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\Controllers\\NotificationController.cs",
               "RelativeToolTip": "Controllers\\NotificationController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACMAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-04T08:42:02.239Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -140,12 +136,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T08:50:40.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T08:50:40.514Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",

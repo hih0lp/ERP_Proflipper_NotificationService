@@ -747,11 +747,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\ERP_Proflipper_NotificationService.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\ERP_Proflipper_NotificationService.csproj",
       "projectName": "ERP_Proflipper_NotificationService",
-      "projectPath": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\ERP_Proflipper_NotificationService.csproj",
+      "projectPath": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\ERP_Proflipper_NotificationService.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\ERP_Proflipper_NotificationService\\obj\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
