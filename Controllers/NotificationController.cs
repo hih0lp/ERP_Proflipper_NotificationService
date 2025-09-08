@@ -22,6 +22,7 @@ namespace ERP_Proflipper_NotificationService.Controllers
 
         [HttpPost]
         [ServiceKeyAuthAttribute]
+        [Route("/not")]
         public async Task<ActionResult> Broadcast([FromBody] Broadcast request)
         {
             await _hubContext.Clients.All.SendAsync("ReceiveNotification", request.Message);

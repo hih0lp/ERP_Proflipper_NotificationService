@@ -20,7 +20,7 @@ namespace ERP_Proflipper_NotificationService.Hubs
         {
             var userId = _userConnections.FirstOrDefault(x => x.Value == Context.ConnectionId).Key;
 
-            if (userId is null)
+            if (userId is not null)
             {
                 _userConnections.Remove(userId);
                 await Groups.RemoveFromGroupAsync(Context.ConnectionId, $"user_{userId}");
