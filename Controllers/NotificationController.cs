@@ -29,12 +29,12 @@ namespace ERP_Proflipper_NotificationService.Controllers
             return Ok(new { Status = "Broadcast sent"});
         }
 
-        [HttpPost("user/{userId}")]
+        [HttpPost("user/{userLogin}")]
         [ServiceKeyAuthAttribute]
-        public async Task<IActionResult> SendToUser(string userId, [FromBody] UserRequest request)
+        public async Task<IActionResult> SendToUser(string userLogin, [FromBody] UserRequest request)
         {
-            await _hubContext.Clients.Groups($"user_{userId}").SendAsync("ReceiveNotification", request.Message, request.CreatedAt);
-            return Ok(new { Status = $"Notification sent to {userId}"});
+            await _hubContext.Clients.Groups($"user_{userLogin}").SendAsync("ReceiveNotification", request.Message, request.CreatedAt);
+            return Ok(new { Status = $"Notification sent to {userLogin}"});
         }
     }
 }

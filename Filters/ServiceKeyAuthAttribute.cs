@@ -13,7 +13,7 @@ namespace ERP_Proflipper_NotificationService.Filters
             var configuration = context.HttpContext.RequestServices.GetService<IConfiguration>(); //getting service
             var expectedServiceKey = configuration["ServiceKey"]; //getting the key from request header
 
-            Console.WriteLine(expectedServiceKey);
+            //Console.WriteLine(expectedServiceKey);
 
             if (string.IsNullOrEmpty(expectedServiceKey)) //checking
             {

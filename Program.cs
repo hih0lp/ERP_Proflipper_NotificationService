@@ -23,10 +23,10 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
-app.UseCors(p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+app.UseCors(p => p.AllowCredentials().AllowAnyHeader().AllowAnyMethod());
+//app.UseAuthorization();
 app.MapHub<NotificationsHub>("/notifications");
 
-app.UseAuthorization();
 
 app.MapStaticAssets();
 
