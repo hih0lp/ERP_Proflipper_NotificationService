@@ -1,24 +1,37 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using ERP_Proflipper_NotificationService.Services;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using System.Collections.Concurrent;
 
 namespace ERP_Proflipper_NotificationService.Hubs
 {
     public class NotificationsHub : Hub
     {
         //private readonly ILogger<NotificationsHub> logger;
-        private static readonly Dictionary<string, string> _userConnections = new();
+        private static readonly ConcurrentDictionary<string, string> _userConnections = new();
+        private readonly NotificationService _notificationService;
+
+        public NotificationsHub(NotificationService notificationService)
+        {
+            _notificationService = notificationService;
+        }
 
         public async Task ClientRegister(string userLogin)
         {
             _userConnections[userLogin] = Context.ConnectionId;
-
             await Groups.AddToGroupAsync(Context.ConnectionId, $"user_{userLogin}");
 
-            Console.WriteLine("Something");
+            await _notificationService.SendPendingNotificationAsync(userLogin);
         }
 
-        public override async Task OnConnectedAsync()
+        //public override async Task OnConnectedAsync()
+        //{
+        //    await base.OnConnectedAsync();
+        //}
+
+        public static bool IsUserOnline(string userLogin)
         {
-            await base.OnConnectedAsync();
+            return _userConnections.ContainsKey(userLogin);
         }
 
         public override async Task OnDisconnectedAsync(Exception? exception)
@@ -27,7 +40,7 @@ namespace ERP_Proflipper_NotificationService.Hubs
 
             if (userLogin is not null)
             {
-                _userConnections.Remove(userLogin);
+                _userConnections.TryRemove(userLogin, out _);
                 await Groups.RemoveFromGroupAsync(Context.ConnectionId, $"user_{userLogin}");
             }
 

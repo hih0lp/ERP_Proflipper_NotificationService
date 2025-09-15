@@ -1,10 +1,12 @@
 using ERP_Proflipper_NotificationService.Hubs;
+using ERP_Proflipper_NotificationService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSignalR();
+builder.Services.AddScoped<NotificationService>();
 builder.Services.AddScoped<ServiceKeyAttribute>();
 builder.Services.AddCors();
 

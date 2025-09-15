@@ -2,11 +2,19 @@ namespace ERP_Proflipper_NotificationService.Models
 {
     public class Notification
     {
-        public string Mesasge { get; set; }
-
+        public int Id { get; set; }
+        public string NotificationMessage { get; set; }
         public DateTime CreatedAt { get; set; }
-        public bool IsRead { get; set; }
-
-       
+        public string UserLogin { get; set; }
+        public string RedirectUri { get; set; } = null;
+        public bool IsSent { get; set; } = false;
     }
+
+    //public class NotificationDAO
+    //{
+    //    public async Task ReadNotification()
+    //    {
+
+    //    }
+    //}
 }

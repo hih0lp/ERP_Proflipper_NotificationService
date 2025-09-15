@@ -1,0 +1,77 @@
+﻿using Microsoft.AspNetCore.SignalR;
+using ERP_Proflipper_NotificationService.Hubs;
+using System.Collections.Concurrent;
+using ERP_Proflipper_NotificationService.Models;
+using Microsoft.AspNetCore.Identity;
+
+namespace ERP_Proflipper_NotificationService.Services
+{
+    public class NotificationService
+    {
+        private readonly IHubContext<NotificationsHub> _hubContext;
+        private readonly NotificationContext _db = new();
+        private readonly ConcurrentDictionary<string, List<Notification>> _pendingNotifications = new();
+
+        public async Task SendNotificationsAsync(string userLogin, Notification notification)
+        {
+            //Notification notification = new()
+            //{
+            //    UserLogin = userLogin,
+            //    NotificationMessage = message,
+            //    CreatedAt = DateTime.UtcNow,
+            //    IsSent = false
+            //};
+
+            //notification.IsSent = false;
+
+            _db.Notifications.Add(notification);
+            _db.SaveChanges();
+
+            //check if user is online
+            bool isUserOnline = await TrySendWebSocketAsync(userLogin, notification);
+
+            //add a notification to pendings to send it when user will be online
+            if (!isUserOnline)
+            {
+                AddToPending(notification);
+            }
+        }
+
+        //try send notifications
+        public async Task<bool> TrySendWebSocketAsync(string userLogin, Notification notification)
+        {
+            if (NotificationsHub.IsUserOnline(userLogin))//check user online
+            {
+                await _hubContext.Clients.Group($"user_{userLogin}").SendAsync("ReceiveNotification", notification);
+
+                notification.IsSent = true;
+                await _db.SaveChangesAsync();
+
+                return true;
+            }
+            return false;
+        }
+
+        public async void AddToPending(Notification notification)
+        {
+            _db.Notifications.Add(notification);
+        }
+
+        public async Task SendPendingNotificationAsync(string userLogin)
+        {
+            var pendingNotifications = _db.Notifications
+                .Where(x => x.UserLogin == userLogin)
+                .Where(x => !x.IsSent)
+                .OrderBy(x => x.CreatedAt)
+                .ToList();
+
+            foreach (var notification in pendingNotifications)
+            {
+                await _hubContext.Clients.Group($"user_{userLogin}").SendAsync("ReceiveNotification", notification); 
+                notification.IsSent = true; 
+            }
+
+            await _db.SaveChangesAsync();
+        }
+    }
+}
