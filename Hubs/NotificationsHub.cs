@@ -9,11 +9,11 @@ namespace ERP_Proflipper_NotificationService.Hubs
     {
         //private readonly ILogger<NotificationsHub> logger;
         private static readonly ConcurrentDictionary<string, string> _userConnections = new();
-        private readonly NotificationService _notificationService;
+        private readonly IServiceProvider _provider;
 
-        public NotificationsHub(NotificationService notificationService)
+        public NotificationsHub(IServiceProvider provider)
         {
-            _notificationService = notificationService;
+            _provider = provider;
         }
 
         public async Task ClientRegister(string userLogin)
@@ -21,7 +21,13 @@ namespace ERP_Proflipper_NotificationService.Hubs
             _userConnections[userLogin] = Context.ConnectionId;
             await Groups.AddToGroupAsync(Context.ConnectionId, $"user_{userLogin}");
 
-            await _notificationService.SendPendingNotificationAsync(userLogin);
+            using (var scope = _provider.CreateScope())
+            {
+                var notificationService = scope.ServiceProvider.GetRequiredService<NotificationService>();
+
+                await notificationService.SendPendingNotificationAsync(userLogin);
+            }
+
         }
 
         //public override async Task OnConnectedAsync()
