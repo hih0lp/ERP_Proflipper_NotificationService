@@ -12,6 +12,11 @@ namespace ERP_Proflipper_NotificationService.Services
         private readonly NotificationContext _db = new();
         private readonly ConcurrentDictionary<string, List<Notification>> _pendingNotifications = new();
 
+        public NotificationService(IHubContext<NotificationsHub> hubContext)
+        {
+            _hubContext = hubContext;
+        }
+
         public async Task SendNotificationsAsync(string userLogin, Notification notification)
         {
             //Notification notification = new()
