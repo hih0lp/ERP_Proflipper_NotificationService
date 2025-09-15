@@ -21,14 +21,11 @@ namespace ERP_Proflipper_NotificationService.Hubs
             _userConnections[userLogin] = Context.ConnectionId;
             await Groups.AddToGroupAsync(Context.ConnectionId, $"user_{userLogin}");
 
-            Console.WriteLine("ПОДКЛЮЧЕНИЕ УСПЕШНО");
-
             using (var scope = _provider.CreateScope())
             {
                 var notificationService = scope.ServiceProvider.GetRequiredService<NotificationService>();
 
                 await notificationService.SendPendingNotificationAsync(userLogin);
-                Console.WriteLine("СООБЩЕНИЕ ОТПРАВЛЕНО");
 
             }
 

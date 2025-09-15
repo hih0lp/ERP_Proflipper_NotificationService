@@ -19,22 +19,11 @@ namespace ERP_Proflipper_NotificationService.Services
 
         public async Task SendNotificationsAsync(string userLogin, Notification notification)
         {
-            //Notification notification = new()
-            //{
-            //    UserLogin = userLogin,
-            //    NotificationMessage = message,
-            //    CreatedAt = DateTime.UtcNow,
-            //    IsSent = false
-            //};
-
-            //notification.IsSent = false;
             notification.CreatedAt = DateTime.UtcNow.ToUniversalTime();
             notification.UserLogin = userLogin;
 
             _db.Notifications.Add(notification);
             _db.SaveChanges();
-
-            Console.WriteLine("ПОПЫТКА ОТПРАВИТЬ СООБЩЕНИЯ");
 
 
             //check if user is online
@@ -54,7 +43,6 @@ namespace ERP_Proflipper_NotificationService.Services
             {
 
                 await _hubContext.Clients.Group($"user_{userLogin}").SendAsync("ReceiveNotification", notification);
-                Console.WriteLine("СООБЩЕНИЕ ОТПРАВЛЕНО");
 
                 notification.IsSent = true;
                 await _db.SaveChangesAsync();
@@ -67,7 +55,6 @@ namespace ERP_Proflipper_NotificationService.Services
         public async void AddToPending(Notification notification)
         {
             _db.Notifications.Add(notification);
-            Console.WriteLine("СООБЩЕНИЕ ДОБАВЛЕНО В ОТЛОЖЕННЫЕ");
 
         }
 
