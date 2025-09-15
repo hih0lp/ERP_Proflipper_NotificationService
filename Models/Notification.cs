@@ -6,7 +6,7 @@ namespace ERP_Proflipper_NotificationService.Models
         public string NotificationMessage { get; set; }
         public DateTime CreatedAt { get; set; }
         public string UserLogin { get; set; }
-        public string RedirectUri { get; set; } = null;
+        public string? RedirectUri { get; set; }
         public bool IsSent { get; set; } = false;
     }
 

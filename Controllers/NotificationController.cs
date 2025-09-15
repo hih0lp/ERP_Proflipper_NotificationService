@@ -34,7 +34,7 @@ namespace ERP_Proflipper_NotificationService.Controllers
 
         [HttpPost("user/{userLogin}")]
         [ServiceKeyAuthAttribute]
-        public async Task<IActionResult> SendToUser(string userLogin, [FromBody] Notification request)//дождаться егорика
+        public async Task<IActionResult> SendToUser(string userLogin, [FromBody]Notification request)//дождаться егорика
         {
             //await _hubContext.Clients.Groups($"user_{userLogin}").SendAsync("ReceiveNotification", request, request.CreatedAt);
             //return Ok(new { Status = $"Notification sent to {userLogin}"});

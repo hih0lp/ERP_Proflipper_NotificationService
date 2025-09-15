@@ -23,6 +23,8 @@ namespace ERP_Proflipper_NotificationService.Services
             //};
 
             //notification.IsSent = false;
+            notification.CreatedAt = DateTime.UtcNow.ToUniversalTime();
+            notification.UserLogin = userLogin;
 
             _db.Notifications.Add(notification);
             _db.SaveChanges();
