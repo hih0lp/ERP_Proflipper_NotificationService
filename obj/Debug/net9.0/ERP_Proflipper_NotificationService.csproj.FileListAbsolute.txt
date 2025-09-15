@@ -103,3 +103,8 @@ C:\Users\User\source\repos\ACRELIS\ERP_Proflipper_NotificationService\obj\Debug\
 C:\Users\User\source\repos\ACRELIS\ERP_Proflipper_NotificationService\obj\Debug\net9.0\ERP_Proflipper_NotificationService.pdb
 C:\Users\User\source\repos\ACRELIS\ERP_Proflipper_NotificationService\obj\Debug\net9.0\ERP_Proflipper_NotificationService.genruntimeconfig.cache
 C:\Users\User\source\repos\ACRELIS\ERP_Proflipper_NotificationService\obj\Debug\net9.0\ref\ERP_Proflipper_NotificationService.dll
+C:\Users\User\source\repos\ACRELIS\ERP_Proflipper_NotificationService\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\source\repos\ACRELIS\ERP_Proflipper_NotificationService\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\User\source\repos\ACRELIS\ERP_Proflipper_NotificationService\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\User\source\repos\ACRELIS\ERP_Proflipper_NotificationService\bin\Debug\net9.0\Npgsql.dll
+C:\Users\User\source\repos\ACRELIS\ERP_Proflipper_NotificationService\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

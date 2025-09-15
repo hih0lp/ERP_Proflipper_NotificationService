@@ -8,6 +8,7 @@ namespace ERP_Proflipper_NotificationService
         public NotificationContext () : base ()
         {
             Database.EnsureCreated();
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         }
 
         public DbSet<Notification> Notifications { get; set; }
