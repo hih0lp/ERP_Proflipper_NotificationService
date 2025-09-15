@@ -38,7 +38,10 @@ namespace ERP_Proflipper_NotificationService.Controllers
         {
             //await _hubContext.Clients.Groups($"user_{userLogin}").SendAsync("ReceiveNotification", request, request.CreatedAt);
             //return Ok(new { Status = $"Notification sent to {userLogin}"});
+            Console.WriteLine("Гюопня сяоеьем");
+
             await _notificationService.SendNotificationsAsync(userLogin, request);
+            Console.WriteLine("яннаыемхъ нропюбкемш");
 
             return Ok();    
         }
