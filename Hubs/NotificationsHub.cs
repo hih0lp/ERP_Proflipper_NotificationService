@@ -10,10 +10,12 @@ namespace ERP_Proflipper_NotificationService.Hubs
         //private readonly ILogger<NotificationsHub> logger;
         private static readonly ConcurrentDictionary<string, string> _userConnections = new();
         private readonly IServiceProvider _provider;
+        private readonly ILogger<NotificationsHub> _logger;
 
-        public NotificationsHub(IServiceProvider provider)
+        public NotificationsHub(IServiceProvider provider, ILogger<NotificationsHub> logger)
         {
             _provider = provider;
+            _logger = logger;
         }
 
         public async Task ClientRegister(string userLogin)
@@ -26,6 +28,7 @@ namespace ERP_Proflipper_NotificationService.Hubs
                 var notificationService = scope.ServiceProvider.GetRequiredService<NotificationService>();
 
                 await notificationService.SendPendingNotificationAsync(userLogin);
+                _logger.LogInformation("Pending notifications has been sending");
 
             }
 

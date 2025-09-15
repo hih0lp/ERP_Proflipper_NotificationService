@@ -11,10 +11,11 @@ namespace ERP_Proflipper_NotificationService.Services
         private readonly IHubContext<NotificationsHub> _hubContext;
         private readonly NotificationContext _db = new();
         private readonly ConcurrentDictionary<string, List<Notification>> _pendingNotifications = new();
-
-        public NotificationService(IHubContext<NotificationsHub> hubContext)
+        private readonly ILogger<NotificationService> _logger;
+        public NotificationService(IHubContext<NotificationsHub> hubContext, ILogger<NotificationService> logger)
         {
             _hubContext = hubContext;
+            _logger = logger;
         }
 
         public async Task SendNotificationsAsync(string userLogin, Notification notification)
@@ -32,6 +33,7 @@ namespace ERP_Proflipper_NotificationService.Services
             //add a notification to pendings to send it when user will be online
             if (!isUserOnline)
             {
+                _logger.LogInformation("Notifications in pendings");
                 AddToPending(notification);
             }
         }
@@ -47,6 +49,8 @@ namespace ERP_Proflipper_NotificationService.Services
                 notification.IsSent = true;
                 await _db.SaveChangesAsync();
 
+                _logger.LogInformation("Notification's sending successfully");
+
                 return true;
             }
             return false;
@@ -55,7 +59,7 @@ namespace ERP_Proflipper_NotificationService.Services
         public async void AddToPending(Notification notification)
         {
             _db.Notifications.Add(notification);
-
+            _logger.LogInformation("Pending");
         }
 
         public async Task SendPendingNotificationAsync(string userLogin)
@@ -66,8 +70,7 @@ namespace ERP_Proflipper_NotificationService.Services
                 .OrderBy(x => x.CreatedAt)
                 .ToList();
 
-            Console.WriteLine("ОТЛОЖЕННЫЕ СООБЩЕНИЯ ОТПРАВЛЯЮТСЯ");
-
+            _logger.LogInformation("Pending notifications has been sending");
 
             foreach (var notification in pendingNotifications)
             {
