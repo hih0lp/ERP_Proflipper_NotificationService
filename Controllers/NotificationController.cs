@@ -47,7 +47,6 @@ namespace ERP_Proflipper_NotificationService.Controllers
         }
 
         [HttpGet("user/{userLogin}")]
-        [ServiceKeyAuth]
         public async Task<JsonResult> GetNotifications(string userLogin)
         {
             return Json(_db.Notifications

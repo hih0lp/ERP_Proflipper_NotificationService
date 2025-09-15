@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\acrelis\\erp_proflipper_notificationservice\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\acrelis\\erp_proflipper_notificationservice\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\acrelis\\erp_proflipper_notificationservice\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\acrelis\\erp_proflipper_notificationservice\\hubs\\notificationshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,16 +58,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Services\\NotificationService.cs",
               "RelativeDocumentMoniker": "Services\\NotificationService.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Services\\NotificationService.cs",
               "RelativeToolTip": "Services\\NotificationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T08:02:16.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T08:02:16.051Z"
             },
             {
               "$type": "Document",
@@ -79,18 +78,17 @@
               "RelativeToolTip": "Hubs\\NotificationsHub.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T11:49:57.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-08T11:49:57.404Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "Controllers\\NotificationController.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Controllers\\NotificationController.cs",
               "RelativeToolTip": "Controllers\\NotificationController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwDAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-08T09:44:48.197Z",
               "EditorCaption": ""
