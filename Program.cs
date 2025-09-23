@@ -25,7 +25,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
-app.UseCors(p => p.AllowCredentials().AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:5173"));
+app.UseCors(p => p.AllowCredentials().AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:7237"));//
 //app.UseAuthorization();
 app.MapHub<NotificationsHub>("/notifications");
 
