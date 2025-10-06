@@ -43,6 +43,10 @@ namespace ERP_Proflipper_NotificationService.Services
         {
             if (NotificationsHub.IsUserOnline(userLogin))//check user online
             {
+                //if (notification.SendingAt >= DateTime.Now) //if notification will publish soon retun false to show that the user is offline
+                //{
+                //    return false;
+                //}
 
                 await _hubContext.Clients.Group($"user_{userLogin}").SendAsync("ReceiveNotification", notification);
 
@@ -67,6 +71,7 @@ namespace ERP_Proflipper_NotificationService.Services
             var pendingNotifications = _db.Notifications
                 .Where(x => x.UserLogin == userLogin)
                 .Where(x => !x.IsSent)
+                //.Where(x => x.SendingAt <= DateTime.Now) //sending when time came
                 .OrderBy(x => x.CreatedAt)
                 .ToList();
 
