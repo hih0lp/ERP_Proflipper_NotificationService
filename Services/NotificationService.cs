@@ -77,13 +77,15 @@ namespace ERP_Proflipper_NotificationService.Services
 
             _logger.LogInformation("Pending notifications has been sending");
 
-            foreach (var notification in pendingNotifications)
+            if (pendingNotifications.Count != 0)
             {
-                await _hubContext.Clients.Group($"user_{userLogin}").SendAsync("ReceiveNotification", notification); 
-                notification.IsSent = true; 
+                foreach (var notification in pendingNotifications)
+                {
+                    await _hubContext.Clients.Group($"user_{userLogin}").SendAsync("ReceiveNotification", notification); 
+                    notification.IsSent = true; 
+                }
+                await _db.SaveChangesAsync();
             }
-
-            await _db.SaveChangesAsync();
         }
     }
 }

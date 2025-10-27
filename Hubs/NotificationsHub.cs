@@ -18,7 +18,7 @@ namespace ERP_Proflipper_NotificationService.Hubs
             _logger = logger;
         }
 
-        public async Task ClientRegister(string userLogin)
+        public async Task ClientRegister(string userLogin) //add check-in existence user connection
         {
             _userConnections[userLogin] = Context.ConnectionId;
             await Groups.AddToGroupAsync(Context.ConnectionId, $"user_{userLogin}");

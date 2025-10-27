@@ -6,6 +6,8 @@ using ERP_Proflipper_NotificationService.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using ERP_Proflipper_NotificationService.Services;
+using Microsoft.EntityFrameworkCore;
+using System.Runtime.CompilerServices;
 
 namespace ERP_Proflipper_NotificationService.Controllers
 {
@@ -50,6 +52,16 @@ namespace ERP_Proflipper_NotificationService.Controllers
                             .Where(x => x.IsSent)
                             .OrderBy(x => x.CreatedAt)
                             .ToList());
+        }
+
+        [HttpPost("notifications/{createdAt}/{userLogin}")]
+        public async Task<StatusCodeResult> DeleteNotifications(string createdAt, string userLogin)
+        {
+            var notification = _db.Notifications.FirstOrDefault(x => x.CreatedAt.ToString() == createdAt && x.UserLogin == userLogin);
+            _db.Notifications.Remove(notification);
+            _db.SaveChanges();
+
+            return Ok();
         }
     }
 }
