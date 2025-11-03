@@ -54,10 +54,10 @@ namespace ERP_Proflipper_NotificationService.Controllers
                             .ToList());
         }
 
-        [HttpPost("notifications/{createdAt}/{userLogin}")]
-        public async Task<StatusCodeResult> DeleteNotifications(string createdAt, string userLogin)
+        [HttpDelete("notifications/{notificationId}")]
+        public async Task<StatusCodeResult> DeleteNotifications(int notificationId)
         {
-            var notification = _db.Notifications.FirstOrDefault(x => x.CreatedAt.ToString() == createdAt && x.UserLogin == userLogin);
+            var notification = _db.Notifications.FirstOrDefault(x => x.Id == notificationId);
             _db.Notifications.Remove(notification);
             _db.SaveChanges();
 
