@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ERP_Proflipper_NotificationService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cd83e0dfeb949f9de1d7c952643c6fdcd73ab41")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d5df47f48736958d32fc3ea2058d8ac199a3058")]
 [assembly: System.Reflection.AssemblyProductAttribute("ERP_Proflipper_NotificationService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ERP_Proflipper_NotificationService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

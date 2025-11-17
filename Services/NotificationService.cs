@@ -63,7 +63,7 @@ namespace ERP_Proflipper_NotificationService.Services
         public async void AddToPending(Notification notification)
         {
             _db.Notifications.Add(notification);
-            _logger.LogInformation("Pending");
+            _logger.LogInformation($"Pending, {DateTime.UtcNow}");
         }
 
         public async Task SendPendingNotificationAsync(string userLogin)
