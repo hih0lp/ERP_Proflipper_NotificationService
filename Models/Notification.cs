@@ -8,14 +8,5 @@ namespace ERP_Proflipper_NotificationService.Models
         public string UserLogin { get; set; }
         public string? RedirectUri { get; set; }
         public bool IsSent { get; set; } = false;
-        //public DateTime SendingAt { get; set; }
     }
-
-    //public class NotificationDAO
-    //{
-    //    public async Task ReadNotification()
-    //    {
-
-    //    }
-    //}
 }
