@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\acrelis\\erp_proflipper_notificationservice\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\acrelis\\erp_proflipper_notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,16 +15,20 @@
       "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\acrelis\\erp_proflipper_notificationservice\\hubs\\notificationshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:hubs\\notificationshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\acrelis\\erp_proflipper_notificationservice\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\acrelis\\erp_proflipper_notificationservice\\hubs\\notificationshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:hubs\\notificationshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\acrelis\\erp_proflipper_notificationservice\\filters\\servicekeyauthattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:filters\\servicekeyauthattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\acrelis\\erp_proflipper_notificationservice\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|solutionrelative:controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CEFCD14-2182-46B9-B432-E0F28C7CF61A}|ERP_Proflipper_NotificationService.csproj|c:\\users\\user\\source\\repos\\acrelis\\erp_proflipper_notificationservice\\models\\broadcast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Models\\Notification.cs",
               "RelativeDocumentMoniker": "Models\\Notification.cs",
@@ -66,7 +66,8 @@
               "RelativeToolTip": "Models\\Notification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T11:32:17.879Z"
+              "WhenOpened": "2025-09-08T11:32:17.879Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -82,40 +83,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Services\\NotificationService.cs",
               "RelativeDocumentMoniker": "Services\\NotificationService.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Services\\NotificationService.cs",
               "RelativeToolTip": "Services\\NotificationService.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAQwFsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAA2wFsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T08:02:16.051Z"
+              "WhenOpened": "2025-09-15T08:02:16.051Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "Controllers\\NotificationController.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Controllers\\NotificationController.cs",
               "RelativeToolTip": "Controllers\\NotificationController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAADwv0MAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-08T09:44:48.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "NotificationContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\NotificationContext.cs",
               "RelativeDocumentMoniker": "NotificationContext.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\NotificationContext.cs",
               "RelativeToolTip": "NotificationContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T07:34:47.652Z"
+              "WhenOpened": "2025-09-15T07:34:47.652Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -125,33 +128,36 @@
               "RelativeDocumentMoniker": "Hubs\\NotificationsHub.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Hubs\\NotificationsHub.cs",
               "RelativeToolTip": "Hubs\\NotificationsHub.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAQwC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAIwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T11:49:57.404Z"
+              "WhenOpened": "2025-09-08T11:49:57.404Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "ServiceKeyAuthAttribute.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Filters\\ServiceKeyAuthAttribute.cs",
               "RelativeDocumentMoniker": "Filters\\ServiceKeyAuthAttribute.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Filters\\ServiceKeyAuthAttribute.cs",
               "RelativeToolTip": "Filters\\ServiceKeyAuthAttribute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T09:58:12.809Z"
+              "WhenOpened": "2025-09-08T09:58:12.809Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\ACRELIS\\ERP_Proflipper_NotificationService\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T09:05:32.765Z"
+              "WhenOpened": "2025-09-08T09:05:32.765Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
