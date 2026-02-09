@@ -15,7 +15,7 @@ namespace ERP_Proflipper_NotificationService
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost; Port=5432; Database=ERP_USERS_NOTIFICATIONS; Username=admin; Password=Tandem_2025; Encoding=UTF8; Pooling=true");
+            optionsBuilder.UseNpgsql($"Host={Environment.GetEnvironmentVariable("DB_HOST")}; Port={Environment.GetEnvironmentVariable("DB_PORT")}; Database=ERP_USERS; Username={Environment.GetEnvironmentVariable("DB_USER")}; Password={Environment.GetEnvironmentVariable("DB_PASSWORD")}; Encoding=UTF8; Pooling=true");
         }
 
 
