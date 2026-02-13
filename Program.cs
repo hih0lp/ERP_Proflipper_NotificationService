@@ -51,7 +51,7 @@ app.UseCors(p => p.AllowCredentials().AllowAnyHeader().AllowAnyMethod().WithOrig
 //app.UseAuthorization();
 app.MapHub<NotificationsHub>("/notifications");
 
-app.MapHealthChecks("/healthcheck", new HealthCheckOptions
+app.MapHealthChecks("/health", new HealthCheckOptions
 {
     ResponseWriter = async (context, report) =>
     {
