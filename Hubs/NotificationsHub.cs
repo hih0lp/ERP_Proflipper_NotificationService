@@ -1,29 +1,57 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using ERP_Proflipper_NotificationService.Services;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using System.Collections.Concurrent;
 
 namespace ERP_Proflipper_NotificationService.Hubs
 {
     public class NotificationsHub : Hub
     {
         //private readonly ILogger<NotificationsHub> logger;
-        private static readonly Dictionary<string, string> _userConnections = new();
+        private static readonly ConcurrentDictionary<string, string> _userConnections = new();
+        private readonly IServiceProvider _provider;
+        private readonly ILogger<NotificationsHub> _logger;
 
-        public async Task ClientRegister(string userId)
+        public NotificationsHub(IServiceProvider provider, ILogger<NotificationsHub> logger)
         {
-            _userConnections[userId] = Context.ConnectionId;
+            _provider = provider;
+            _logger = logger;
+        }
 
-            await Groups.AddToGroupAsync(Context.ConnectionId, $"user_{userId}");
+        public async Task ClientRegister(string userLogin) //add check-in existence user connection
+        {
+            _userConnections[userLogin] = Context.ConnectionId;
+            await Groups.AddToGroupAsync(Context.ConnectionId, $"user_{userLogin}");
 
-            Console.WriteLine("Something");
+            using (var scope = _provider.CreateScope())
+            {
+                var notificationService = scope.ServiceProvider.GetRequiredService<NotificationService>();
+
+                await notificationService.SendPendingNotificationAsync(userLogin);
+                _logger.LogInformation("Pending notifications has been sending");
+
+            }
+
+        }
+
+        //public override async Task OnConnectedAsync()
+        //{
+        //    await base.OnConnectedAsync();
+        //}
+
+        public static bool IsUserOnline(string userLogin)
+        {
+            return _userConnections.ContainsKey(userLogin);
         }
 
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
-            var userId = _userConnections.FirstOrDefault(x => x.Value == Context.ConnectionId).Key;
+            var userLogin = _userConnections.FirstOrDefault(x => x.Value == Context.ConnectionId).Key;
 
-            if (userId is null)
+            if (userLogin is not null)
             {
-                _userConnections.Remove(userId);
-                await Groups.RemoveFromGroupAsync(Context.ConnectionId, $"user_{userId}");
+                _userConnections.TryRemove(userLogin, out _);
+                await Groups.RemoveFromGroupAsync(Context.ConnectionId, $"user_{userLogin}");
             }
 
             await base.OnDisconnectedAsync(exception);
