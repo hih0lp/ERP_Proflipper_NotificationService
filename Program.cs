@@ -12,7 +12,7 @@ Env.Load();
 var builder = WebApplication.CreateBuilder(args);
 
 builder.WebHost.ConfigureKestrel(serverOptions => {
-    serverOptions.ListenAnyIP(8081);
+    serverOptions.ListenAnyIP(Convert.ToInt32(Environment.GetEnvironmentVariable("NOTIFICATION_SERVICE_PORT")));
     serverOptions.ConfigureHttpsDefaults(httpsOptions => {
         httpsOptions.SslProtocols = System.Security.Authentication.SslProtocols.Tls12;
     });
